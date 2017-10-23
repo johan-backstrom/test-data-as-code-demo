@@ -1,12 +1,13 @@
 package com.github.johan.backstrom.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@JsonIgnoreProperties(ignoreUnknown = false)
+@Builder
 public class QuoteRequestV2 {
 
     String firstName;
