@@ -14,38 +14,12 @@ public class CarInsuranceQuoteTests {
     CarInsuranceControllerV1 carInsuranceController = new CarInsuranceControllerV1();
 
     @Test
-    public void volvoCosts1000() {
-        assertThat(
-                carInsuranceController.getQuote(
-                        QuoteRequestV1.builder()
-                                .age(30)
-                                .carBrand(CarBrand.Volvo)
-                                .carValue(300000)
-                                .gender(Gender.male)
-                                .hasOtherInsurance(true)
-                                .name("Göran")
-                                .build()
-
-                ).getBody().getPricePerYear(),
-                is(1000)
-        );
-    }
-
-    @Test
-    public void getDiscountWithVolvoAndOtherInsurance() {
-        assertThat(
-                carInsuranceController.getQuote(
-                        QuoteRequestV1.builder()
-                                .age(51)
-                                .carBrand(CarBrand.Volvo)
-                                .carValue(300000)
-                                .gender(Gender.male)
-                                .hasOtherInsurance(true)
-                                .name("Göran")
-                                .build()
-
-                ).getBody().getDiscount(),
-                is(100)
+    public void volvoCostsJson(){
+        System.out.println(
+                new QuoteRequestBuilder()
+                        .setGender(Gender.female)
+                        .setAge(60)
+                        .createQuote()
         );
     }
 }

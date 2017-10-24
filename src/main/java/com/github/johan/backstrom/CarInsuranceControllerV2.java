@@ -1,6 +1,5 @@
 package com.github.johan.backstrom;
 
-import com.github.johan.backstrom.model.QuoteRequestV1;
 import com.github.johan.backstrom.model.QuoteRequestV2;
 import com.github.johan.backstrom.model.QuoteResponse;
 import org.springframework.http.HttpStatus;
